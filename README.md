@@ -63,10 +63,14 @@ This was the best trade-off I could find.
 <!--  -->
 <!-- Copy paste generated documentation content below -->
 <!--  -->
+	
+
 
 <br>
 
 ## HELP
+
+> write section explanation here
 
 <br><br>
 
@@ -83,9 +87,13 @@ botkun.help()
 <br><br>
 
 
+
+
 <br>
 
 ## CACHE
+
+> write section explanation here
 
 <br><br>
 
