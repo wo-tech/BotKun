@@ -30,6 +30,34 @@ It contains :
 
 # Initialisation
 
+### 1 Add the library using the following script ID
+
+`144w2zZ83W6qQnpaRwZAPthzaekJfHF5Cy9gfgdgN8cIcJgwCau7ZBjSa`
+
+### 2 Create an instance of botKun using the script below
+
+```js
+let magicIncantation = {
+    cache : {
+      cache : CacheService.getScriptCache(),  //the type of cache you would like to use
+      timeout : 3600                          //the number of seconds the cache should be kept (max 6h = 21600)
+    },
+    cw : {
+      token : INSERT_YOUR_CW_TOKEN_HERE       //insert your cw token here (mock example : 'uhua2k98y3yv2192gs')
+    }
+  }
+
+let botKun = BotKun.summon(magicIncantation)
+// help() will print all available functions on the console
+botKun.help()
+```
+
+### 3 Keep a tab open with this documentation
+
+At the time of publication, ***Google App Script only supports autocompletion on methods directly called on the library***.<br>
+However, creating an instance of botKun is necessary to avoid the library storing your API token/ cache in its own script scope.
+This was the best trade-off I could find.
+
 # Methods
 
 <!--  -->
@@ -53,8 +81,6 @@ botkun.help()
 [Back to Table of Content](#BotKun-Library)
 
 <br><br>
-
-
 
 
 <br>
