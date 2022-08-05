@@ -1,3 +1,14 @@
+# BotKun
+
+RPA Library for App Script
+
+## Contents
+
+- [Description](#description)
+- [Initialisation](#initialisation)
+<!--  -->
+<!-- Copy paste generated table of content below  -->
+<!--  -->
 - [Methods](#methods)
   * [HELP](#help)
     + [.help](#help)
@@ -5,6 +16,25 @@
     + [.cache_put](#cache_put)
     + [.cache_get](#cache_get)
     + [.cache_optimize](#cache_optimize)
+<!--  -->
+<!-- Copy paste generated table of content above  -->
+<!--  -->
+
+# Description
+
+BotKun Library was made to provide high level functions in App Script to beginners. <br>It is centered around chatWork API, but basically allows to use API calls and fetches in general while optimizing runtime and performance by chunk-caching process heavy get functions under the hood.
+
+It contains :
+
+- Advanced Chatwork features (Api calls, and functions tailored )
+
+# Initialisation
+
+# Methods
+
+<!--  -->
+<!-- Copy paste generated documentation content below -->
+<!--  -->
 
 <br>
 
