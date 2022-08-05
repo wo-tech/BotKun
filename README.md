@@ -8,7 +8,7 @@
   * [cache](#cache)
     + [.cache_put](#cacheput)
     + [.cache_get](#cacheget)
-    + [.cache_optimize](#cacheoptimize)
+    + [.cache_optimize](#cache-optimize)
 
 ***use [this link](https://ecotrust-canada.github.io/markdown-toc/) to generate table of content***<br>
 just copy paste all content below and convert
