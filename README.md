@@ -72,7 +72,7 @@ botkun.cache_put()
 
 <br><br>
 
-### `.cache_get`
+### .cache_get
 
 > write explanation for cache_get
 ```js
