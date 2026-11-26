@@ -33,7 +33,7 @@
       }
 
       // construct result Log
-      let resultLog = '|\n|  See documentation : url.com\n|\n\n'
+      let resultLog = '|\n|  See documentation : https://github.com/wo-tech/BotKun/blob/main/README.md\n|\n\n'
       
       for (let key in sortedObject) {
         resultLog += '**\n*'+key.toUpperCase()+'\n**\n'+sortedObject[key]
@@ -51,6 +51,11 @@
     */
     BotKun.prototype.cache_put = function(key, value) {
       let json = JSON.stringify(value);
+      // nothing to store (undefined, function...) : clear the key instead of failing
+      if (json === undefined) {
+        this.cache.remove(key);
+        return;
+      }
       let cSize = Math.floor(this.chunkSize / 2);
       let chunks = [];
       let index = 0;
@@ -110,9 +115,14 @@
       // load data using original function if not
       let infoToUser = forceLoad ? 'Reloading "'+key+'"!' : '"'+key+'" not found by BotKun!'
       console.log(infoToUser+'\nRetrieving values...')
-      let returnValue = functionParams ? callbackFunc(functionParams) : callbackFunc()
+      let returnValue = functionParams !== null ? callbackFunc(functionParams) : callbackFunc()
       this.cache_put(key, returnValue)
-      console.log('"'+key+'" stored by BotKun!\nNext time will be faster.')
+      // null / undefined can't be told apart from an empty cache, so they are loaded again next time
+      if (returnValue == null) {
+        console.log('"'+key+'" has no value, nothing to store.')
+      } else {
+        console.log('"'+key+'" stored by BotKun!\nNext time will be faster.')
+      }
       console.timeEnd('Loading "'+key+'"')
       return returnValue;
     }
