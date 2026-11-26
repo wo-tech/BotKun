@@ -18,7 +18,7 @@
         while (index < json.length){
           cKey = key + "_" + index;
           chunks.push(cKey);
-          docCache.put(cKey, json.substring(index, cSize), timeOut+5);
+          docCache.put(cKey, json.substring(index, index + cSize), timeOut+5);
           index += cSize;
         }
         let superBlk = {
